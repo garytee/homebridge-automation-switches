@@ -118,12 +118,12 @@ class SwitchAccessory {
       stream.on("error", function (err) {
         accessory.log("Error: " + err);
         callback(
-          err || new Error("Error setting " + accessory.name + " to " + state)
+          err || new Error("Error setting " + accessory.name + " to " + _state)
         );
       });
 
       stream.on("finish", function () {
-        accessory.log("Set " + accessory.name + " to " + state);
+        accessory.log("Set " + accessory.name + " to " + _state);
         callback(null);
       });
 
